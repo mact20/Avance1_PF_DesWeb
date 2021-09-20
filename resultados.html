@@ -4,7 +4,7 @@
         <title>Resultados</title>
         <meta charset="utf-8">
         <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="Css/styles.css"/>
+        <link rel="stylesheet" type="text/css" href="Css/style.css"/>
         <script type="text/javascript" src="Js/resultadosJs.js"></script>
     </head>
     <body>
@@ -13,19 +13,17 @@
         </header>
 
         <nav>
-            <a href="examen.html">Examen</a>
         </nav>
 
         <main>
-            <label for="name">Nombre del Parcial:</label>
-            <input type="text" id="name" /><br />
-
-            <label>&nbsp;</label>
-            <input type="button" id="calculate" value="Post"/><br />
-
-            <div>
-                <h4>Resultados: </h4>
+            <div id="result">
+                <h4>Resultado</h4>
             </div>
+            <br><br><br>
+
+            <form action="alumno.html">
+                <input type="submit" value="Regresar">
+            </form>
         </main>
 
         <footer>
