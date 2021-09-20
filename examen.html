@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Examen</title>
+        <meta charset="utf-8">
+        <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="Css/styles.css"/>
+        <script type="text/javascript" src="Js/examenJs.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Examen</h1>
+            <h3>Primer Parcial Segundo Parcial</h3>
+        </header>
+
+        <nav>
+            <a href="resultados.html">Resultados</a>
+        </nav>
+
+        <main>
+            <div id="content">
+                <h4>Pregunta 1</h4>
+                <p>¿Cuánto es 1+1?</p>
+                <input type="radio" name="p1" id="1" value="wrong"/>1<br>
+                <input type="radio" name="p1" id="2"value="correct"/>2<br>
+                <input type="radio" name="p1" id="3"value="wrong"/>3<br>
+                <input type="radio" name="p1" id="4"value="wrong"/>4
+            </div>
+
+            <div id="content">
+                <h4>Pregunta 2</h4>
+                <p>¿Cuál es el nombre de la materia?</p>
+                <input type="radio" name="p2" id="1" value="wrong"/>Circuitos Electricos<br>
+                <input type="radio" name="p2" id="2"value="wrong"/>Matematicas II<br>
+                <input type="radio" name="p2" id="3"value="correct"/>Desarrollo de Aplicaciones Web<br>
+                <input type="radio" name="p2" id="4"value="wrong"/>Robotica Aplicada
+            </div>
+
+            <div id="content">
+                <h4>Pregunta 3</h4>
+                <p>Agua pasa por mi casa, cate por mi corazon.¿Que es?</p>
+                <input type="text" id="t1"/>
+            </div>
+
+            <div id="content">
+                <h4>Pregunta 4</h4>
+                <p>Bota, bota y no es pelota. ¿Que es?</p>
+                <input type="text" id="t2"/>
+            </div>
+
+            <div id="content">
+                <h4>Pregunta 5</h4>
+                <p>Haz un dibujo de tu actividad favorita.</p>
+                <input type="file" id="i1" accept="image/png, image/jpeg">
+            </div>
+
+            <input type="button" id="revisar" value="Revisar"><br><br>
+            <form action="resultados.html">
+                <input type="submit" value="Resultados">
+            </form>
+        </main>
+
+        <footer>
+        </footer>
+    </body>
+</html>
