@@ -97,6 +97,7 @@ input[type=submit]{
     padding: 8px 64px;
     margin-left: 10px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 input[type=button]{
@@ -107,4 +108,5 @@ input[type=button]{
     padding: 8px 77px;
     margin-left: 10px;
     font-weight: bold;
+    cursor: pointer;
 }
