@@ -2,6 +2,7 @@ var correctas=0;
 var noPreguntas=5;
 
 var revisar_click = function(){
+    correctas=0;
     for(j=1;j<=4;j++){
         check("p"+j,"res"+j);
     }
