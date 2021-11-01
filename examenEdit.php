@@ -2,9 +2,9 @@
     $conn = mysqli_connect('localhost', 'chuca', '1234567812', 'basequest');
 
     if(!$conn) {
-        echo 'Valio Vergaa: ' . mysqli_connect_error();
+        echo 'NO funciona: ' . mysqli_connect_error();
     } else {
-        echo 'Valio Chingon: ';
+        echo 'Funciono: ';
     }
     $numPreguntas = $_POST['numPreguntas'];
     $tituloExamen = $_POST['tituloExamen'];
@@ -43,15 +43,16 @@
             if (isset($_POST[$numPreg], $_POST[$numRes], $_POST['tituloExamen'])){
                 $pregunta = $_POST[$numPreg]; 
                 $respuesta = $_POST[$numRes];
-                
+                echo $pregunta;
                 //Preparamos la orden SQL
-                $consulta = "INSERT INTO PAbierta
-                (TestMame,Pregunta,Respuesta) VALUES ('$tituloExamen','$pregunta', $respuesta)";
+                $consulta = "INSERT INTO pabierta
+                (TestMame,Pregunta,Respuesta) VALUES ('$tituloExamen','$pregunta', '$respuesta')";
                 
                 if (mysqli_query($conn,$consulta) ){
                     echo "<p>Registro agregado.</p>";
                     } else {
                     echo "<p>No se agregó...</p>";
+                    echo $consulta;
                 }
                 
                 } else {
@@ -61,12 +62,12 @@
         } if ($tipoPreg == 'file'){
             if (isset($_POST[$numPreg], $_POST['tituloExamen'])){
                 $pregunta = $_POST[$numPreg]; 
-                
                 //Preparamos la orden SQL
                 $consulta = "INSERT INTO PFile
                 (TestMame,Pregunta) VALUES ('$tituloExamen','$pregunta')";
                 
                 if (mysqli_query($conn,$consulta) ){
+                    echo $consulta;
                     echo "<p>Registro agregado.</p>";
                     } else {
                     echo "<p>No se agregó...</p>";
