@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,65 +15,30 @@
             border-bottom:1px solid #76a571;
             }  
         </style>
-        <script type="text/javascript" src="Js/examenJs.js"></script>
+        <script type="text/javascript" src="Js/examenEdit.js"></script>
     </head>
     <body>
         <header>
             <h1>Editar Examen<img src="Images/logo.jpeg" alt="" id="logo"></h1>
-            <input type="text" placeholder="Ingresa el titulo para el examen" id="tituloExamen"/>
         </header>
 
-        <nav>
-        </nav>
-
         <main>
-            <div class="content">
-                <h4>Pregunta 1</h4>
-                <input  type="text" placeholder="Ingresa la pregunta 1" id="pregunta1" style="text-align: left;"/>
-                <p>Selecciona la respuesta correcta</p>
-                <input type="radio" name="p1" value="uno"/><input type="text" name="p1R" placeholder="Ingresa el valor de la opcion"><br>
-                <input type="radio" name="p1" value="dos"/><input type="text" name="p1R" placeholder="Ingresa el valor de la opcion"><br>
-                <input type="radio" name="p1" value="tres"/><input type="text" name="p1R" placeholder="Ingresa el valor de la opcion"><br>
-                <input type="radio" name="p1" value="cuatro"/><input type="text" name="p1R" placeholder="Ingresa el valor de la opcion"><br>
-                <div id="res1"style="font-family: serif;"></div>
-            </div>
-
-            <div class="content">
-                <h4>Pregunta 2</h4>
-                <input  type="text" placeholder="Ingresa la pregunta 2" id="pregunta2" style="text-align: left;"/>
-                <p>Selecciona la respuesta correcta</p>
-                <input type="radio" name="pregunta2" value="uno"><input type="text" name="p2R" placeholder="Ingresa el valor de la opcion"/><br>
-                <input type="radio" name="p2" value="dos"/><input type="text" name="p2R" placeholder="Ingresa el valor de la opcion"/><br>
-                <input type="radio" name="p2" value="tres"/><input type="text" name="p2R" placeholder="Ingresa el valor de la opcion"/><br>
-                <input type="radio" name="p2" value="cuatro"/><input type="text" name="p2R" placeholder="Ingresa el valor de la opcion"/><br>
-                <div id="res2"style="font-family: serif;"></div>
-            </div>
-
-            <div class="content">
-                <h4>Pregunta 3</h4>
-                <input  type="text" placeholder="Ingresa la pregunta 3" id="pregunta3" style="text-align: left;"/>
-                <p>Escribe la respuesta correcta</p>
-                <input type="text" name="p3"/>
-                <div id="res3"style="font-family: serif;"></div>
-            </div>
-
-            <div class="content">
-                <h4>Pregunta 4</h4>
-                <input  type="text" placeholder="Ingresa la pregunta 4" id="pregunta4" style="text-align: left;"/>
-                <p>Escribe la respuesta correcta</p>
-                <input type="text" name="p4"/>
-                <div id="res4"style="font-family: serif;"></div>
-            </div>
-
-            <div class="content">
-                <h4>Ingresa la fecha para el examen</h4>
-                <input type="date" id="fecha"  style="text-align: left;"/>
-            </div>
-
-            <br>
-            <a href="./materia.html"><input type="button" id="guardar" value="Guardar"></a><br>
+            <form class="content">
+                <h2> Agregar Pregunta </h2>
+                <p>Selecciona el tipo de pregunta</p>
+                <input type="radio" name="tipoPregunta" value="multiple" checked='true'/>Opcion Multiple<br>
+                <input type="radio" name="tipoPregunta" value="abierta"/>Abierta<br>
+                <input type="radio" name="tipoPregunta" value="file"/>Archivo<br>
+             </form>
+             <button onclick="myFunction()">Agregar Pregunta</button>      
+            <form id="Preguntas" method="post" action="examenEdit.php">
+                <input type="text" placeholder="Ingresa el titulo para el examen" name="tituloExamen"/>
+                <input name="numPreguntas" value="" id="numPreguntas">
+                <input value="Subir Preguntas" type="submit" />
+                
+                </form>
         </main>
-
+            
         <footer>
         </footer>
     </body>
