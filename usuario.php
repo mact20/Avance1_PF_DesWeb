@@ -33,7 +33,7 @@
                         if($rol == 'L'){
                             header("Location: ../Avance1_PF_DesWeb-main/Profesor.php");
                         }else{
-                            header("Location: ../Avance1_PF_DesWeb-main/alumno.html");
+                            header("Location: ../Avance1_PF_DesWeb-main/alumno.php");
                         }
                     } else {
                         echo "Contraseña incorrecta";

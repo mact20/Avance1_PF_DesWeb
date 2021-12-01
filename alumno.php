@@ -35,7 +35,6 @@
         $grado = "5to";
     */
 
-    //agregar correo y 
 
     $_SESSION['nombre'] = $nombre;
     $_SESSION['apellido'] = $apellido;
