@@ -1,5 +1,5 @@
 <?php
-    include('../Avance1_PF_DesWeb/php/ConsultaBD.php');
+    include('../Avance1_PF_DesWeb-main/php/ConsultaBD.php');
 
     session_start();
 
@@ -12,7 +12,7 @@
         $row = mysqli_fetch_array($result);
     }
     else{
-        echo "error";
+        header("Location: ../Avance1_PF_DesWeb-main/inicio.html");
     }
     
     $consulta2 = "SELECT alumnos.matricula, alumnos.nombre, grupos.idGrupo, materias.nombre, materias.idMateria
@@ -29,7 +29,7 @@
     if(consultaBD($consulta2)){
        $row2 = mysqli_fetch_array($result2);
     }else{
-        echo "error 2";
+        header("Location: ../Avance1_PF_DesWeb-main/inicio.html");
     }
 ?>
 

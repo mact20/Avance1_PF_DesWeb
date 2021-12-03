@@ -46,6 +46,7 @@
                 
 			} else {
                 echo "error al hacer la consulta";
+                echo "<button id='enviar' class='btn' onclick=window.location.href='../Avance1_PF_DesWeb-main/inicio.html'>Inicio</button>";
 			}  
             		
 		?>
