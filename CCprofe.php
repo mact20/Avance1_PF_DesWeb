@@ -17,14 +17,14 @@
 			$actu = $_POST['Actualpassword'];
             $new = $_POST['Newpassword'];
 
-            $consulta = "SELECT * FROM usuario WHERE Matricula='$mat'";
+            $consulta = "SELECT * FROM usuarios WHERE matricula='$mat'";
             $resultado = consultaBD($consulta);
 
             if(ConsultaBD($consulta)){
                 $row = mysqli_fetch_array($resultado);
                 
-                if($actu == $row['Contraseña']){
-                    $consulta = "UPDATE usuario SET Contraseña='$new' WHERE Matricula='$mat'";
+                if($actu == $row['contrasena']){
+                    $consulta = "UPDATE usuarios SET contrasena='$new' WHERE matricula='$mat'";
                     if(ConsultaBD($consulta)){
                         echo "<br>";
                         echo "Éxito al actualizar los datos :)";
