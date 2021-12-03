@@ -17,7 +17,7 @@
         <script type="text/javascript" src="Js/examenJs.js"></script>
         <?php
             session_start(); 
-            include('ConsultaBD.php');
+            include('../Avance1_PF_DesWeb-main/php/ConsultaBD.php');
             //$NombreExamen= $_POST['Nombre'];
             $NombreExamen="Primer Parcial Desarrollo de Aplicaciones Web"
         ?>
