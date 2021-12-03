@@ -35,7 +35,7 @@
 			} else {
 				$consulta = "INSERT INTO profesores(matricula, nombre, apellido, correo, telefono) VALUES ('$mat','$nombre','$apellido','$correo','$telefono')";
 				if(ConsultaBD($consulta)){
-					$consulta = "INSERT INTO usuarios(matricula, contraseña) VALUES ('$mat','$cont')";
+					$consulta = "INSERT INTO usuarios(matricula, contrasena) VALUES ('$mat','$cont')";
                     if(ConsultaBD($consulta)){
                         echo "<br>";
                         echo "Éxito al ingresar los datos :)";
