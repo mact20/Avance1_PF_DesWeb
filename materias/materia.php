@@ -48,7 +48,7 @@
                             $i++;
                         }
                     ?>
-                    <li><a href="./examenEdit.html">Crear Parcial</a></li>
+                    <li><a href="../examenEdit.html">Crear Parcial</a></li>
                 </ul>
             </div>
             
