@@ -11,7 +11,7 @@
 	if(ConsultaBD($consulta)){
         $row = mysqli_fetch_array($resultado);
     } else {
-        echo "error";
+        header("Location: ../Avance1_PF_DesWeb-main/inicio.html");
     }
 ?>
 

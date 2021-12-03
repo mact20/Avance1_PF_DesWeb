@@ -1,7 +1,7 @@
 <?php
     define("cServidor","localhost");
-    define("cUsuario","Admin");
-    define("cClave","password");
+    define("cUsuario","root");
+    define("cClave","");
     define("cBd","basequest");
 
     function consultaBD($consulta){

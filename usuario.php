@@ -8,7 +8,7 @@
 		<br><br>
 		<?php
 
-            include('../Avance1_PF_DesWeb-main/php/ConsultaBD.php');
+            include('../Avance1_PF_DesWeb/php/ConsultaBD.php');
 
             $usuario = $_POST['username'];
 			$pass = $_POST['password'];
@@ -22,7 +22,7 @@
                 if(empty($row)){
                     echo "No existe ese usuario";
                     echo "<br><br>";
-			        echo "<button id='enviar' class='btn' onclick=window.location.href='../Avance1_PF_DesWeb-main/inicio.html'>Inicio</button>";
+			        echo "<button id='enviar' class='btn' onclick=window.location.href='../Avance1_PF_DesWeb/inicio.html'>Inicio</button>";
                 } else{
                     if($pass == $row['contrasena']){
                         $rol = substr($usuario, 0, 1);
@@ -31,21 +31,22 @@
                         $_SESSION["matricula"] = $usuario;
                                 
                         if($rol == 'L'){
-                            header("Location: ../Avance1_PF_DesWeb-main/Profesor.php");
+                            header("Location: ../Avance1_PF_DesWeb/Profesor.php");
                         }else if($rol == 'A'){
-                            header("Location: ../Avance1_PF_DesWeb-main/alumno.php");
+                            header("Location: ../Avance1_PF_DesWeb/alumno.php");
                         }else{
-                            header("Location: ../Avance1_PF_DesWeb-main/AdminMenu.html");
+                            header("Location: ../Avance1_PF_DesWeb/AdminMenu.html");
                         }
                     } else {
                         echo "Contraseña incorrecta";
                         echo "<br><br>";
-                        echo "<button id='enviar' class='btn' onclick=window.location.href='../Avance1_PF_DesWeb-main/inicio.html'>Inicio</button>";
+                        echo "<button id='enviar' class='btn' onclick=window.location.href='../Avance1_PF_DesWeb/inicio.html'>Inicio</button>";
                     }
                 }
                 
 			} else {
                 echo "error al hacer la consulta";
+                echo "<button id='enviar' class='btn' onclick=window.location.href='../Avance1_PF_DesWeb-main/inicio.html'>Inicio</button>";
 			}  
             		
 		?>

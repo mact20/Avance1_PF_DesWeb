@@ -1,11 +1,19 @@
 <?php
-    $conn = mysqli_connect('localhost', 'chuca', '1234567812', 'basequest');
+    include('../Avance1_PF_DesWeb-main/php/ConsultaBD.php');
 
-    if(!$conn) {
-        echo 'NO funciona: ' . mysqli_connect_error();
+    session_start();
+
+    $mat = $_SESSION['matricula'];
+
+    $consulta = "SELECT * FROM profesores WHERE matricula = '$mat'";
+    $resultado = consultaBD($consulta);
+
+	if(ConsultaBD($consulta)){
+        $row = mysqli_fetch_array($resultado);
     } else {
-        echo 'Funciono: ';
+        header("Location: ../Avance1_PF_DesWeb-main/inicio.html");
     }
+
     $numPreguntas = $_POST['numPreguntas'];
     $tituloExamen = $_POST['tituloExamen'];
 
