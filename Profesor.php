@@ -5,7 +5,7 @@
 
     $mat = $_SESSION['matricula'];
 
-    $consulta = "SELECT * FROM profesores WHERE Matricula = '$mat'";
+    $consulta = "SELECT * FROM profesores WHERE matricula = '$mat'";
     $resultado = consultaBD($consulta);
 
 	if(ConsultaBD($consulta)){
@@ -26,7 +26,7 @@
     <body>
         <header>
             <img src="Images/logo.jpeg" alt="" id="logo">
-            <h1>Profesor: <?php echo $row['Nombre']; ?> </h1>
+            <h1>Profesor: <?php echo $row['nombre']; ?> </h1>
             <nav>
                 <a class="drop_link" href="micuenta.php">Mi Cuenta</a>
             </nav>
@@ -35,23 +35,47 @@
 
         <main>
             <section>
-                <div class="bloque_materia">
-                    <img src="images/image1.jpg">
-                    <a href="materia.html">Materia 1</a>
-                    <p>Semestre Sep-Dic 2021</p>
-                </div>
+                <?php //Desplegar las materias y crear la página de la materia
+                    $consulta = "SELECT * FROM materias WHERE matProfesor = '$mat'";
+                    $resultado = consultaBD($consulta);
 
-                <div class="bloque_materia">
-                    <img src="images/image1.jpg">
-                    <a href="materia.html">Materia 2</a>
-                    <p>Semestre Sep-Dic 2021</p>
-                </div>
+                    while($row2 = mysqli_fetch_array($resultado)){
 
-                <div class="bloque_materia">
-                    <img src="images/image1.jpg">
-                    <a href="materia.html">Materia 3</a>
-                    <p>Semestre Sep-Dic 2021</p>
-                </div>
+                        $nombre = $row2['nombre'];
+
+                        if ($nombre == trim($nombre) && strpos($nombre, ' ') !== false) {
+                            $name = preg_replace("/[\s_]/", "-", $nombre);
+                        }else{
+                            $name = $nombre;
+                        }
+
+                        $filename = '../Avance1_PF_DesWeb-main/materias/'.$name.'.php'; 
+
+                        if(!file_exists($filename)){
+                            $tpl_path = "../Avance1_PF_DesWeb-main/materias/materia.php"; 
+                            $tpl = file_get_contents($tpl_path); 
+
+                            $data['idMat'] = $row2['idMateria'];
+                            $data['materia']= $nombre;
+
+                            $placeholders = array("{idMat}", "{materia}"); 
+
+                            $new_file = str_replace($placeholders, $data, $tpl); 
+
+                            $fp = fopen($filename, "w");
+                            fwrite($fp, $new_file);
+                            fclose($fp); 
+                        }
+
+                        echo "<div class='bloque_materia'>";
+                        echo "<img src='images/image1.jpg'>";
+                        echo "<a href=$filename>";
+                        echo "(".$row2['idMateria'].") ".$nombre;
+                        echo"</a>";
+                        echo "<p>Semestre Sep-Dic 2021</p>";
+                        echo "</div>";
+                    }
+                ?>
             </section>
         </main>
 

@@ -13,7 +13,7 @@
             $usuario = $_POST['username'];
 			$pass = $_POST['password'];
             
-            $consulta = "SELECT * FROM usuario WHERE Matricula = '$usuario'";
+            $consulta = "SELECT * FROM usuarios WHERE matricula = '$usuario'";
             $resultado = consultaBD($consulta);
 
 			if(ConsultaBD($consulta)){
@@ -24,7 +24,7 @@
                     echo "<br><br>";
 			        echo "<button id='enviar' class='btn' onclick=window.location.href='../Avance1_PF_DesWeb-main/inicio.html'>Inicio</button>";
                 } else{
-                    if($pass == $row['Contraseña']){
+                    if($pass == $row['contrasena']){
                         $rol = substr($usuario, 0, 1);
 
                         session_start();
@@ -33,7 +33,7 @@
                         if($rol == 'L'){
                             header("Location: ../Avance1_PF_DesWeb-main/Profesor.php");
                         }else if($rol == 'A'){
-                            header("Location: ../Avance1_PF_DesWeb-main/alumno.html");
+                            header("Location: ../Avance1_PF_DesWeb-main/alumno.php");
                         }else{
                             header("Location: ../Avance1_PF_DesWeb-main/AdminMenu.html");
                         }

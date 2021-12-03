@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Agregar Alumno</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="Css/style.css">
+        <link rel="shortcut icon" href="Images/logo.jpeg">
+        <style> 
+            #leftHalf {
+                background-image: url('Images/image3.jpg');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                width: 50%;
+                height: 100%;
+                position: absolute;
+            }
+
+            #rightHalf {
+                width: 40%;
+                position: absolute;
+                right: 0px;
+                height: 100%;
+            }
+
+            label{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: x-large;
+            }
+
+            input{
+                width: 40%;
+                border-radius: 4px;
+                background-color: #cffdca;
+            }
+
+            button{
+                background-color: #04AA6D;
+                color: white;
+                border-radius: 5px;
+                width: 10%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <img src="Images/logo.jpeg" alt="" id="logo">
+        <div id="leftHalf"></div>
+        <div id="rightHalf">
+            <form action="../Avance1_PF_DesWeb-main/AgregarAlumno.php" method='POST'>
+                
+                <br>
+                <label for="matricula">Matrícula</label>
+                <br>
+                <input type="text" id="matricula" name="matricula" required>
+                <br>
+
+                <br>
+                <label for="contraseña">Contraseña</label>
+                <br>
+                <input type="password" id="contraseña" name="contraseña" required>
+                <br><br>
+                <br>
+                <br>
+                <label for="nombre">Nombre</label>
+                <br>
+                <input type="text" id="nombre" name="nombre" required>
+                <br>
+
+                <br>
+                <label for="apellido">Apellido</label>
+                <br>
+                <input type="text" id="apellido" name="apellido" required>
+                <br>
+
+                <br>
+                <label for="grupo">Grupo</label>
+                <br>
+                <input type="text" id="grupo" name="grupo" required>
+                <br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

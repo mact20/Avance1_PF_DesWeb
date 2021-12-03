@@ -5,7 +5,7 @@
 
     $mat = $_SESSION['matricula'];
 
-    $consulta = "SELECT * FROM profesores WHERE Matricula = '$mat'";
+    $consulta = "SELECT * FROM profesores WHERE matricula = '$mat'";
     $resultado = consultaBD($consulta);
 
 	if(ConsultaBD($consulta)){
@@ -26,7 +26,7 @@
     <body>
         <header>
             <img src="Images/logo.jpeg" alt="" id="logo">
-            <h1>Profesor: <?php echo $row['Nombre']; ?> </h1>
+            <h1>Profesor: <?php echo $row['nombre']; ?> </h1>
             <nav>
                 <a class="drop_link" href="Profesor.php">Home</a></li>
                 <a class="drop_link" href="CCprofe.html">Cambiar contraseña</a>
@@ -36,10 +36,10 @@
         </header>
 
         <main>
-            <p><?php echo $row['Nombre']; ?> </p>
+            <p><?php echo $row['nombre']; ?> </p>
             <img class="foto_perfil" src="images/image2.jpg">
-            <p>Correo: <?php echo $row['Correo']; ?> </p>
-            <p>Teléfono: <?php echo $row['Telefono']; ?> </p>
+            <p>Correo: <?php echo $row['correo']; ?> </p>
+            <p>Teléfono: <?php echo $row['telefono']; ?> </p>
         </main>
 
         <footer class="footer">
