@@ -1,5 +1,5 @@
 <?php
-    include('../Avance1_PF_DesWeb-main/php/ConsultaBD.php');
+    include('../Avance1_PF_DesWeb/php/ConsultaBD.php');
 
     session_start();
 

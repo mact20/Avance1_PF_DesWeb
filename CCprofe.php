@@ -8,7 +8,7 @@
 	<body>
 		<?php
 
-            include('../Avance1_PF_DesWeb-main/php/ConsultaBD.php');
+            include('../Avance1_PF_DesWeb/php/ConsultaBD.php');
 
             session_start();
 
@@ -45,7 +45,7 @@
 			    
 			//Regresar al menu
 			echo "<br><br>";
-			echo "<button id='enviar' class='btn' onclick=window.location.href='../Avance1_PF_DesWeb-main/micuenta.php'>Regresar</button>";
+			echo "<button id='enviar' class='btn' onclick=window.location.href='../Avance1_PF_DesWeb/micuenta.php'>Regresar</button>";
 
 		?>
 		

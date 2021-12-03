@@ -1,5 +1,5 @@
 <?php
-    include('../Avance1_PF_DesWeb-main/php/ConsultaBD.php');
+    include('../Avance1_PF_DesWeb/php/ConsultaBD.php');
 
     session_start();
 
@@ -11,7 +11,7 @@
 	if(ConsultaBD($consulta)){
         $row = mysqli_fetch_array($resultado);
     } else {
-        header("Location: ../Avance1_PF_DesWeb-main/inicio.html");
+        header("Location: ../Avance1_PF_DesWeb/inicio.html");
     }
 
     $numPreguntas = $_POST['numPreguntas'];
@@ -36,7 +36,7 @@
                 $consulta = "INSERT INTO PMult
                 (TestMame,Pregunta,Respuesta,Op1,Op2,Op3) VALUES ('$tituloExamen','$pregunta','$respuesta','$op1','$op2', '$op3')";
                 
-                if (mysqli_query($conn,$consulta) ){
+                if (mysqli_query(ConsultaBD($consulta)) ){
                     echo "<p>Registro agregado.</p>";
                     } else {
                     echo "<p>No se agregó...</p>";
@@ -56,7 +56,7 @@
                 $consulta = "INSERT INTO pabierta
                 (TestMame,Pregunta,Respuesta) VALUES ('$tituloExamen','$pregunta', '$respuesta')";
                 
-                if (mysqli_query($conn,$consulta) ){
+                if (mysqli_query(ConsultaBD($consulta)) ){
                     echo "<p>Registro agregado.</p>";
                     } else {
                     echo "<p>No se agregó...</p>";
@@ -74,7 +74,7 @@
                 $consulta = "INSERT INTO PFile
                 (TestMame,Pregunta) VALUES ('$tituloExamen','$pregunta')";
                 
-                if (mysqli_query($conn,$consulta) ){
+                if (mysqli_query(ConsultaBD($consulta)) ){
                     echo $consulta;
                     echo "<p>Registro agregado.</p>";
                     } else {

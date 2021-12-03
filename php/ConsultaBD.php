@@ -2,7 +2,7 @@
     define("cServidor","localhost");
     define("cUsuario","root");
     define("cClave","");
-    define("cBd","basequest");
+    define("cBd","basequest2");
 
     function consultaBD($consulta){
 

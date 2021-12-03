@@ -8,8 +8,8 @@
 	<body>
 		<?php
 
-            include('../Avance1_PF_DesWeb-main/php/ConsultaBD.php');
-            
+            include('../Avance1_PF_DesWeb/php/ConsultaBD.php');
+            session_start();
             $mat = $_SESSION['matricula'];
 
 			$nombre = $_POST['nombre'];
@@ -32,7 +32,7 @@
 				echo "<br>";
 				echo "El teléfono tiene que ser numérico: ".$telefono;
 			} else {
-				$consulta = "UPDATE profesores SET nombre='$nombre',apellido='$apellido',telefono='$telefono',correo='$correo' WHERE Matricula='$mat'";
+				$consulta = "UPDATE profesores SET nombre='$nombre',apellido='$apellido',telefono='$telefono',correo='$correo' WHERE matricula='$mat'";
 				if(ConsultaBD($consulta)){
 					echo "<br>";
 					echo "Éxito al actualizar los datos :)";
@@ -46,7 +46,7 @@
 
 			//Regresar al menu
 			echo "<br><br>";
-			echo "<button id='enviar' class='btn' onclick=window.location.href='../Avance1_PF_DesWeb-main/micuenta.php'>Menu</button>";
+			echo "<button id='enviar' class='btn' onclick=window.location.href='../Avance1_PF_DesWeb/micuenta.php'>Menu</button>";
 
 		?>
 		

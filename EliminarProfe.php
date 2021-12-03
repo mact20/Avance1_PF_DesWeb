@@ -8,7 +8,7 @@
 	<body>
 		<?php
 
-            include('../Avance1_PF_DesWeb-main/php/ConsultaBD.php');
+            include('../Avance1_PF_DesWeb/php/ConsultaBD.php');
             
             $dato = $_POST['dato'];
 		
@@ -34,7 +34,7 @@
 
 			//Regresar al menu
 			echo "<br><br>";
-			echo "<button id='enviar' class='btn' onclick=window.location.href='../Avance1_PF_DesWeb-main/AdminMenu.html'>Menu</button>";
+			echo "<button id='enviar' class='btn' onclick=window.location.href='../Avance1_PF_DesWeb/AdminMenu.html'>Menu</button>";
 
 		?>
 		

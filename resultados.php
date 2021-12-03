@@ -1,5 +1,5 @@
 <?php
-    include('../Avance1_PF_DesWeb-main/php/ConsultaBD.php');
+    include('../Avance1_PF_DesWeb/php/ConsultaBD.php');
 
     session_start();
 
@@ -7,9 +7,9 @@
     $rol = substr($mat, 0, 1);
 
     if($rol == 'L'){
-        $filename = " ../Avance1_PF_DesWeb-main/Profesor.php";
+        $filename = " ../Avance1_PF_DesWeb/Profesor.php";
     }else{
-        $filename = " ../Avance1_PF_DesWeb-main/alumno.php";
+        $filename = " ../Avance1_PF_DesWeb/alumno.php";
     }
 ?>
 
