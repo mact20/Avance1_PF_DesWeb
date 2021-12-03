@@ -28,7 +28,7 @@
 			} else {
 				$consulta = "INSERT INTO alumnos(matricula, nombre, apellido, idGrupo) VALUES ('$mat','$nombre','$apellido','$grupo')";
 				if(ConsultaBD($consulta)){
-					$consulta = "INSERT INTO usuarios(matricula, contraseña) VALUES ('$mat','$cont')";
+					$consulta = "INSERT INTO usuarios(matricula, contrasena) VALUES ('$mat','$cont')";
                     if(ConsultaBD($consulta)){
                         echo "<br>";
                         echo "Éxito al ingresar los datos :)";
