@@ -108,7 +108,7 @@
         ?>
         <br>
             <input type="button" id="revisar" value="Revisar"><br><br>
-            <form action="resultados.html">
+            <form action="resultados.php">
                 <input type="submit" value="Resultados">
             </form>
         </main>
