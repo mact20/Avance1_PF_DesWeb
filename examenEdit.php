@@ -43,8 +43,8 @@
                 }
                 
                 } else {
-                
-                echo '<p>Por favor, complete el <a href="formulario.html">formulario</a></p>';
+                    echo '<p>Por favor, complete todos los campos</p>';
+                    return;
                 }
         }
         if ($tipoPreg == 'abierta'){
@@ -64,8 +64,8 @@
                 }
                 
                 } else {
-                
-                echo '<p>Por favor, complete el <a href="formulario.html">formulario</a></p>';
+                    echo '<p>Por favor, complete todos los campos</p>';
+                    return;
                 }
         } if ($tipoPreg == 'file'){
             if (isset($_POST[$numPreg], $_POST['tituloExamen'])){
@@ -82,8 +82,8 @@
                 }
                 
                 } else {
-                
-                echo '<p>Por favor, complete el <a href="formulario.html">formulario</a></p>';
+                    echo '<p>Por favor, complete todos los campos</p>';
+                    return;
                 }
         }
     }
