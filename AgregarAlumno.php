@@ -26,7 +26,7 @@
 				echo "<br>";
 				echo "El apellido solo puede contener letras: ".$apellido;
 			} else {
-				$consulta = "INSERT INTO alumnos(matricula, nombre, apellido, idGrupo) VALUES ('$mat','$nombre','$apellido','$grupo')";
+				$consulta = "INSERT INTO alumnos(matricula, nombre, apellido, idGrupo) VALUES ('$mat','$nombre','$apellido','$semestre')";
 				if(ConsultaBD($consulta)){
 					$consulta = "INSERT INTO usuarios(matricula, contrasena) VALUES ('$mat','$cont')";
                     if(ConsultaBD($consulta)){
